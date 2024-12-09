@@ -22,7 +22,7 @@ public class DKit2 : MonoBehaviour
         
     }
 
-    void OnMouseDown(){
+    void OnMouseDown(){  //quando si clicca sul collider, aggiorna le variabili
         clickOn = true;
         clickOnP = true;
     }
