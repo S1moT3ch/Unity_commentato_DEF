@@ -19,7 +19,7 @@ public class PickUpTorciaPlayerDEF : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Torcia.istance.clickOn | Input.GetKeyDown(KeyCode.F12))
+        if (Torcia.istance.clickOn | Input.GetKeyDown(KeyCode.F12)) //se si clicca sulla torcia a terra oppure si preme il tasto F12, viene mostrata la torcia in mano al player o viceversa
         {
             pTorcia.SetActive(!isShowing);
             isShowing = !isShowing;
