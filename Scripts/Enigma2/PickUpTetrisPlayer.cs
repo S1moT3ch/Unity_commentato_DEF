@@ -47,12 +47,12 @@ public class PickUpTetrisPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (P1.istance.clickOn)
+        if (P1.istance.clickOn) //se si clicca sul pezzo n a terra, viene mostrato il corrispondente pezzo in mano al player
         {
             Pp1.SetActive(true);
-            pezzo = 1;
+            pezzo = 1; //viene aggiornato l'id del pezzo afferrato
             Debug.Log("Pezzo 1 player on");
-            if (qP1.istance.clickOn)
+            if (qP1.istance.clickOn) //se si clicca sul pezzo n nel quadro, viene nascosto il pezzo n in mano al player e vengono aggiornate le variabili per evitare alcuni bug presenti
             {
                 Pp1.SetActive(false);
                 Debug.Log("Pezzo 1 player off");
@@ -78,7 +78,8 @@ public class PickUpTetrisPlayer : MonoBehaviour
             Pp3.SetActive(true);
             pezzopassato = "p3";
             
-            if (Remote.istance.pezzoricevuto.Equals("p3"))
+            if (Remote.istance.pezzoricevuto.Equals("p3")) //se l'id del pezzo ricevuto è uguale a 3 viene nascosto il pezzo 3 in mano al player e vengono aggiornate le variabili per evitare alcuni bug presenti
+                                                           //si procede in modo analogo per il pezzo 7
             {
                 Pp3.SetActive(false);
                 P3.istance.clickOn = false;
