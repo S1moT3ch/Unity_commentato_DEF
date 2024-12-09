@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class NumbersOnMonitor : MonoBehaviour
+public class NumbersOnMonitor : MonoBehaviour //nella cartella si trova un analogo script per un altro monitor analogo a questo
 {
    
     public TextMeshProUGUI testo;
