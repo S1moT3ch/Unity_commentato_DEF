@@ -25,7 +25,7 @@ public class PickUpTetris : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (P1.istance.clickOn)
+        if (P1.istance.clickOn) //se si clicca sul pezzo n a terra, viene nascosto tale pezzo
         {
             tP1.SetActive(false);
             Debug.Log("Pezzo 1 terra off");
