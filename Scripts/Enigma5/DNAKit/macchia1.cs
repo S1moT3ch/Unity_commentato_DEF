@@ -22,6 +22,6 @@ public class macchia1 : MonoBehaviour
     }
 
     void OnMouseDown(){
-        clickOn = true;
+        clickOn = true;  //quando si clicca sul collider, aggiorna le variabili
     }
 }
