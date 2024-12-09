@@ -18,6 +18,6 @@ public class ClickOn0 : MonoBehaviour
 
 
     void OnMouseDown(){
-        NumbersOnDisplay.istance.UpdateCodice("0");
+        NumbersOnDisplay.istance.UpdateCodice("0"); //se si clicca sul collider, si aggiorna il codice, analogamente per gli altri script successivi
     }
 }
