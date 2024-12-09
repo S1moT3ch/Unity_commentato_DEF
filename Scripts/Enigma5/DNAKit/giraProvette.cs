@@ -23,6 +23,6 @@ public class giraProvette : MonoBehaviour
     }
 
     void OnMouseDown(){
-        clickOn = true;
+        clickOn = true;  //quando si clicca sul collider, aggiorna le variabili
     }
 }
