@@ -8,7 +8,7 @@ public class Sx : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        porta=CubeP.GetComponent<Rigidbody>();
+        porta=CubeP.GetComponent<Rigidbody>(); //uso del RigidBody per gestire la torsione
     }
 
     // Update is called once per frame
@@ -17,9 +17,9 @@ public class Sx : MonoBehaviour
         
     }
 
-    void OnMouseDown()
+    void OnMouseDown() //se si clicca sul collider del blocco sinistro
     {
-        if (CubeP == null)
+        if (CubeP == null) //necessario per gestire l'eventuale caso in cui la porta del caveau sia stat già aperta
             {
                 Debug.Log("Caveau già aperto");
             }
