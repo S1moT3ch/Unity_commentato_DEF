@@ -23,7 +23,7 @@ public class Pr3 : MonoBehaviour
         
     }
 
-    void OnMouseDown()
+    void OnMouseDown() //se si clicca sul collider, si aggiornano le variabili booleane per attivare i trigger, analogo ragionamento vale per l'altro script nella stessa cartella
     {
         clickOn = true;
         clickOnT = true;
