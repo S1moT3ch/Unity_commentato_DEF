@@ -23,7 +23,7 @@ public class Sx : MonoBehaviour
             {
                 Debug.Log("Caveau già aperto");
             }
-            else //altrimenti viene applicata una torsione a destra alla porta del caveau e viene aggiornata la variabile 
+            else //altrimenti viene applicata una torsione a destra alla porta del caveau e viene aggiornata la variabile relativa la numero di giri a sinistra per gestire la giusta sequenza di apertura 
             {
                 porta.AddTorque(new Vector3(-intensity,0,0),ForceMode.Impulse);
                 CaveauManager.istance.UpdateSx(1);
