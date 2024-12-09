@@ -22,7 +22,7 @@ public class qP1 : MonoBehaviour
         
     }
 
-    void OnMouseDown(){
+    void OnMouseDown(){ //se si clicca sul collider, si aggiornano le variabili booleane per attivare i trigger, analogo ragionamento vale per gli altri script nella stessa cartella
         clickOn = true;
         clickOnQ = true;
         Debug.Log("Pezzo 1 quadro click");
