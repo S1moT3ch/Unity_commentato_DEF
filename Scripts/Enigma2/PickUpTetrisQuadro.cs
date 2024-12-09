@@ -34,7 +34,7 @@ public class PickUpTetrisQuadro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (qP1.istance.clickOnQ && PickUpTetrisPlayer.istance.pezzo == 1)
+        if (qP1.istance.clickOnQ && PickUpTetrisPlayer.istance.pezzo == 1) // se e solo se si clicca sul pezzo n del puzzle, viene mostrato il pezzo n sul quadro del tetris, inoltre si aggiorna la variabile clickOnQ per effettuare ad ogni update in controllo sul pezzo clickato
         {
             qp1.SetActive(true);
             qP1.istance.clickOnQ = false;
