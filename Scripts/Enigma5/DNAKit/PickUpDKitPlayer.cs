@@ -12,7 +12,7 @@ public class PickUpDKitPlayer : MonoBehaviour
         istance=this;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Start() //all'inizio nascondi i kit
     {
         pDNAKit.SetActive(false);
         tampone.SetActive(false);
@@ -21,7 +21,7 @@ public class PickUpDKitPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DKit.istance.clickOnP)
+        if (DKit.istance.clickOnP) //se si clicca su un determinato kit o macchia o sul gira provette, viene mostrato il relativo kit o tampone oppure nascosto il kit e il tampone e si aggiorna la variabile relativa 
         {
             pDNAKit.SetActive(true);
             DKit.istance.clickOnP = false;
