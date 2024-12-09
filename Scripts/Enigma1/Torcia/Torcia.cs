@@ -22,6 +22,6 @@ public class Torcia : MonoBehaviour
     }
 
     void OnMouseDown(){
-        clickOn = true;
+        clickOn = true; //se si clicca sul collider, viene aggiornata la variabile per attivare il trigger per afferrare la torcia in mano
     }
 }
