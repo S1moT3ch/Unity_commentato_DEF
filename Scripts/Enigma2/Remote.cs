@@ -13,10 +13,10 @@ public class Remote : MonoBehaviour
 
     void Start()
     {
-        rb3=r3.GetComponent<Rigidbody>();
+        rb3=r3.GetComponent<Rigidbody>(); //uso dei RigidBody per gestire la gravità sui pezzi che giungono dall'altra stanza
         rb7=r7.GetComponent<Rigidbody>();
         
-        r3.SetActive(false);
+        r3.SetActive(false); //all'inizio, i pezzi remoti sono nascosti e non sono soggetti a gravità
         r7.SetActive(false);
     
 
@@ -29,7 +29,7 @@ public class Remote : MonoBehaviour
     }
     public void Update()
     {
-        if (pezzoricevuto.Equals("p3"))
+        if (pezzoricevuto.Equals("p3")) // se il pezzo ricevuto è il numero 3 o il numero 7, viene mostrato il corrispondente pezzo remoto e viene attivata la gravità sul pezzo in questione per farlo "cadere" dalla grata
         {
             r3.SetActive(true);
             rb3.useGravity = true;
