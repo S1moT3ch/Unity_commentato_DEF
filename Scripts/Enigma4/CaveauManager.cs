@@ -30,25 +30,25 @@ public class CaveauManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (aadx == 1)
-            adx = true;
+        if (aadx == 1) //se si gira la prima volta a destra per 1 volta
+            adx = true; //aggiorna la relativa variabile
         else
-            adx = false;
+            adx = false; //altrimenti la variabile deve rimanere falsa
 
-        if (cadx == 3)
-            cdx = true;
+        if (cadx == 3)  //se si gira la terza volta a destra per 3 volte
+            cdx = true; //aggiorna la relativa variabile
         else
-            cdx = false;
+            cdx = false; //altrimenti la variabile deve rimanere falsa
 
-        if (basx == 2)
-            bsx = true;
+        if (basx == 2) //se si gira la seconda volta a destra per 2 volte
+            bsx = true; // //aggiorna la relativa variabile
         else
-            bsx = false;
+            bsx = false; //altrimenti la variabile deve rimanere falsa
 
-        if (dasx ==1)
-            dsx = true;
+        if (dasx == 1)  //se si gira la quarta volta a sinistra per 1 volta
+            dsx = true; //aggiorna la relativa variabile
         else
-            dsx = false;
+            dsx = false; //altrimenti la variabile deve rimanere falsa
 
         if (adx && bsx && cdx && dsx) //se sono state effettuate correttamente nel giusto ordine tutte le rotazioni
         {
@@ -76,8 +76,7 @@ public class CaveauManager : MonoBehaviour
             cadx = cadx + volte; //aggiorna la variabile relativa
             Debug.Log("1 click terza volta a dx");
         }
-        else if (adx  && bsx && cdx && dsx == false) //se non si segue l'ordine stabilito, viene resettata tutta la procedura già fatta o
-        per aprire la porta 
+        else if (adx  && bsx && cdx && dsx == false) //se non si segue l'ordine stabilito, viene resettata tutta la procedura già fatta per aprire la porta 
         {
             aadx = 0;
             adx = false;
