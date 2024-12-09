@@ -11,7 +11,7 @@ public class InputTastiera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()  //se si preme un determinato tasto, viene aggiornato il valore sul monitor
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
