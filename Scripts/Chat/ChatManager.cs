@@ -25,7 +25,7 @@ public class ChatManager : NetworkBehaviour
             SendChatMessage(chatInput.text, playerName);
             chatInput.text = "";
         }
-        else if (Input.GetKeyDown(KeyCode.F3))
+        else if (Input.GetKeyDown(KeyCode.F3))   //se si preme F3 viene inviato l'id del pezzo passato
         {
             SendTetrisPiece(PickUpTetrisPlayer.istance.pezzopassato);
         }
@@ -44,7 +44,7 @@ public class ChatManager : NetworkBehaviour
         SendChatMessageServerRpc(S); 
     }
    
-    void AddMessage(string msg)
+    void AddMessage(string msg) //si evita di scrivere nella finestra di chat se si tratta di una trasmissione di pezzi del tetris
     {
         if(msg.Equals("p3"))
         {
