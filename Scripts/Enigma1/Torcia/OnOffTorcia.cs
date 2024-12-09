@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class OnOffTorcia : MonoBehaviour
 
@@ -13,19 +13,19 @@ public class OnOffTorcia : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        torcia.intensity = 0;
+        torcia.intensity = 0; //all'inizio, torcia spenta
         on = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-         if (Input.GetKeyDown(KeyCode.Mouse1)){
+         if (Input.GetKeyDown(KeyCode.Mouse1)){ //se si clicca il tasto dx del mouse, si accende la torcia con colori differenti per ogni click
             AccendiTorcia();
          }
     }
 
-    void AccendiTorcia()
+    void AccendiTorcia() //uso di una variabile per capire lo stato di accensione della luce e aggiornarne il colore di conseguenza 
     {
         if (on == 0)
         {
