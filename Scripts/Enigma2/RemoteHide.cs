@@ -11,7 +11,7 @@ public class RemoteHide : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() //se si clicca su uno dei pezzi a terra da passare nella stanza dove effettivamente si trova il quadro, si nasconde il pezzo a terra
     {
         if (Pr3.istance.clickOnH)
         {
