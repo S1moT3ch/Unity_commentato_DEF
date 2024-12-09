@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LightManager : MonoBehaviour
 {
-    public Material neonSx;
+    public Material neonSx; //uso di due materiali emittenti diversi per ogni neon per gestire l'accensione delle luci
     public Material neonSxSpento;
     public GameObject luceSx;
     public Material neonDx;
@@ -17,10 +17,10 @@ public class LightManager : MonoBehaviour
     
     public void Start()
     {
-        StartCoroutine(AccendiNeon());
+        StartCoroutine(AccendiNeon()); //avvia la routine
     }
 
-    public void LampeggioDx()
+    public void LampeggioDx() // se il neon dx è spento, accendilo, altrimenti il contrario
     {
         if(onDx)
         {
@@ -36,7 +36,7 @@ public class LightManager : MonoBehaviour
             onDx = true;
         }
     }
-    public void LampeggioSx()
+    public void LampeggioSx() //se il neon sx è spento accendilo, altrimenti il contrario
     {
         if(onSx)
         {
@@ -52,9 +52,9 @@ public class LightManager : MonoBehaviour
             onSx = true;
         }
     }
-    IEnumerator AccendiNeon()
+    IEnumerator AccendiNeon() // ciclo infinito
     {
-         while(true)
+         while(true) //se il passo è n, fai lampeggiare la corrispondente luce per quel passo e, quando si spegne ogni luce, passa al passo successivo
         {
             if(passo == 1)
             {
