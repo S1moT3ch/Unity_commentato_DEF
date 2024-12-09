@@ -7,12 +7,12 @@ public class MacchieView : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        macchia1.SetActive(false);
+        macchia1.SetActive(false); //all'inizio le macchie non si vedono
         macchia2.SetActive(false);
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() //se il player sta guardando il giusto topo e ha accesa la torcia sul colore UV, mostra la rispettiva macchia
     {
         if (PlayerDnaKit.istance.isBlood1 && OnOffTorcia.istance.on == 2)
         {
