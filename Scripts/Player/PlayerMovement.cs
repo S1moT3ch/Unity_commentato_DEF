@@ -77,12 +77,12 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection =orientation.forward*verticalInput + orientation.right * horizontalInput;
-        if (PlayerMonitor.istance.isMonitor | ChatView.istance.isShowing)
+        if (PlayerMonitor.istance.isMonitor | ChatView.istance.isShowing) //se il player sta guardando il monitor o la chat è aperta, blocca la posizione della player
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
             rb.freezeRotation = true;
         }
-        else
+        else //altrimenti sblocca la posizione e muovi il player
         {
             Debug.Log("movimento");
             rb.constraints &= ~RigidbodyConstraints.FreezePositionX;
