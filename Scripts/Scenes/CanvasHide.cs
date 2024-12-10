@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
  
 public class CanvasHide : MonoBehaviour {
  
-    public GameObject RoomMenu; // Assign in inspector
+    public GameObject RoomMenu; 
     public GameObject layout;
     public GameObject pause;
     public EventSystem eventSystemPlay;
@@ -17,13 +17,12 @@ public class CanvasHide : MonoBehaviour {
 
     }
 
-    public void LetsPlay()
+    public void LetsPlay() //quando viene chiamata questa funzione premendo un bottone nell'UI
     {
-        pause.SetActive(true);
-        //isShowing = !isShowing;
-        RoomMenu.SetActive(false);
-        layout.SetActive(false);
-        eventSystemPlay.enabled = false;
+        pause.SetActive(true); //mostra il tasto pausa
+        RoomMenu.SetActive(false); //nascondi la lobby
+        layout.SetActive(false); //nascondi la schermata di start
+        eventSystemPlay.enabled = false; //gestisci l'attivazione degli EventSystem per evitare alcuni bug
         eventSystemPause.enabled = true;
     }
 }
