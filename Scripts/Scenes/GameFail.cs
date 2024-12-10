@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GameFail : MonoBehaviour
 {
-    public GameObject player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,9 +15,8 @@ public class GameFail : MonoBehaviour
         
     }
 
-    void OnMouseDown()
+    void OnMouseDown() //se si clicca col mouse sul collier, carica la scena 2
     {
-        //DestroyImmediate(player, true);
         SceneManager.LoadScene(2);
     }
 }
