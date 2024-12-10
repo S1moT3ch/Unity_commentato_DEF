@@ -18,11 +18,11 @@ public class PlayerRotation : MonoBehaviour
     
     private void Update()
     {
-        if(ChatView.istance.isShowing)
+        if(ChatView.istance.isShowing) //se la chat è aperta, non ruotare il player
         {
             Debug.Log("chat aperta");
         }
-        else
+        else //altrimenti ruota il player secondo la posizione del cursore del mouse
         {
             float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime *sensX;
 
