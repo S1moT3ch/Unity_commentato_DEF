@@ -20,7 +20,7 @@ public class PlayerMonitor : MonoBehaviour
     void FixedUpdate()
     {
         Debug.Log("isMonitor "+isMonitor);
-        RaycastHit hit;
+        RaycastHit hit; //uso del RayCast per capire se il player sta guardando un monitor usando un tag relativo al monitor
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange) && hit.transform.gameObject.tag == "monitor")
         {
             //update variable
