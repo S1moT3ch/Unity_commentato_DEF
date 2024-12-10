@@ -12,12 +12,12 @@ public class PlayerObjectFreeze : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (PlayerMonitor.istance.isMonitor | ChatView.istance.isShowing)
+        if (PlayerMonitor.istance.isMonitor | ChatView.istance.isShowing) //se il player sta guardando il monitor oppure la chat è aperta, blocca la posizione del player
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
             GetComponent<Rigidbody>().freezeRotation = true;
         }
-        else
+        else //altrimenti sblocca il player
         {
             Debug.Log("movimento");
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
