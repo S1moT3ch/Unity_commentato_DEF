@@ -23,12 +23,12 @@ public class PlayerCam : MonoBehaviour
     
     private void Update()
     {
-        if(ChatView.istance.isShowing)
+        if(ChatView.istance.isShowing) //se la chat è aperta
         {
-            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ; //blocca la camera
         }
         
-        else
+        else //altrimenti sblocca e ruota la camera
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
