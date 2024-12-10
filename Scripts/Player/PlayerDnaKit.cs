@@ -18,7 +18,7 @@ public class PlayerDnaKit : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void FixedUpdate() //uso del RayCast per capire se il player sta guardando una determinata macchia di sangue usando dei tag relativi ad ogni macchia
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange) && hit.transform.gameObject.tag == "sangue1")
